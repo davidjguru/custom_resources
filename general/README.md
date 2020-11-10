@@ -1,5 +1,5 @@
 # PROJECT_NAME
-Welcome to the README file of the project Orona. This is a Drupal-based project, a web platform for showing the whole scenario of Orona, one of the largest elevator companies of the World.  
+Welcome to the README file of the project PROJECT_NAME. This is a Drupal-based project, a web platform for showing the whole scenario of PROJECT_NAME, one of the largest elevator companies of the World.  
 
 ## 1- Introduction
 
@@ -12,11 +12,11 @@ When you get the project deployed in local environment (following the nextsectio
 ### 2.1- List of addresses  
 The set of available resources is as follows:  
 
-Orona Deploy Resources for Local Environment   
+PROJECT_NAME Deploy Resources for Local Environment   
 ---------------------------------------------   
 
-* Web project Orona (https): https://PROJECT_NAME.ddev.site:9043/
-* Web project Orona (http):  http://PROJECT_NAME.ddev.site:9080
+* Web project PROJECT_NAME (https): https://PROJECT_NAME.ddev.site:9043/
+* Web project PROJECT_NAME (http):  http://PROJECT_NAME.ddev.site:9080
 * MailHog (https):   	     https://PROJECT_NAME.ddev.site:8026
 * MailHog (http):            http://PROJECT_NAME.ddev.site:8025 
 * phpMyAdmin (https):	     https://PROJECT_NAME.ddev.site:8037
