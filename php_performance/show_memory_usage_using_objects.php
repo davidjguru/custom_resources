@@ -1,4 +1,13 @@
 <?php
+
+// Creates a new .csv file.
+  $file = fopen('results_memory_consumption.csv', a);
+
+// Puts the headers for columns in file.
+  $columns = ['Number of objects', 'Memory consumption'];
+  fputcsv($file, $columns);
+
+
 // Basic class for testing.
   class Foo
   {
@@ -14,12 +23,17 @@
   {
       $a = new Foo;
       $a->self = $a;
+      $current_memory_usage = formatBytes(memory_get_usage() - $baseMemory);
+      fputcsv($file, [$i, $current_memory_usage]);
       if ( $i % 500 === 0 )
       {
   	// Every 500 items print the current memory consumption.
-        echo sprintf( '%8d: ', $i ), formatBytes(memory_get_usage() - $baseMemory), "\n";
+        echo sprintf( '%8d: ', $i ), $current_memory_usage, "\n";
       }
   }
+
+// Closing the .csv file.
+  fclose($file);
 
 // Support function for modelling the output of memory values
   function formatBytes($bytes, $precision = 2) {
