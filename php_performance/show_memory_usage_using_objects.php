@@ -1,7 +1,7 @@
 <?php
 
 // Creates a new .csv file.
-  $file = fopen('results_memory_consumption.csv', a);
+  $file = fopen('results_memory_consumption.csv', 'a');
 
 // Puts the headers for columns in file.
   $columns = ['Number of objects', 'Memory consumption'];
