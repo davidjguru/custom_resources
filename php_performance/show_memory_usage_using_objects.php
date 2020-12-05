@@ -16,7 +16,7 @@ for ( $i = 0; $i <= 100000; $i++ )
     $a->self = $a;
     if ( $i % 500 === 0 )
     {
-	/ / Every 500 items print the current memory consumption.
+	// Every 500 items print the current memory consumption.
         echo sprintf( '%8d: ', $i ), formatBytes(memory_get_usage() - $baseMemory), "\n";
     }
 }
