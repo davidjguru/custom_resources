@@ -24,14 +24,14 @@
       $a = new Foo;
       $a->self = $a;
       
-      // Get current memory usage and loads it in csv file.
-      $current_memory_usage = formatBytes(memory_get_usage() - $baseMemory);
+      // Gets current memory usage and loads it in csv file.
+      $current_memory_usage = memory_get_usage() - $baseMemory;
       fputcsv($file, [$i, $current_memory_usage]);
 
       if ( $i % 500 === 0 )
       {
-  	// Every 500 items print the current memory consumption.
-        echo sprintf( '%8d: ', $i ), $current_memory_usage, "\n";
+  	// Every 500 items prints in prompt the current memory consumption.
+        echo sprintf( '%8d: ', $i ), formatBytes($current_memory_usage), "\n";
       }
   }
 
