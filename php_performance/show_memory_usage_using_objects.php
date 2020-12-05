@@ -23,8 +23,11 @@
   {
       $a = new Foo;
       $a->self = $a;
+      
+      // Get current memory usage and loads it in csv file.
       $current_memory_usage = formatBytes(memory_get_usage() - $baseMemory);
       fputcsv($file, [$i, $current_memory_usage]);
+
       if ( $i % 500 === 0 )
       {
   	// Every 500 items print the current memory consumption.
