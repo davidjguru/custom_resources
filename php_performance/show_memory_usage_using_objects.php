@@ -1,7 +1,7 @@
 <?php
 
 // Creates a new .csv file.
-  $file = fopen('results_memory_consumption.csv', 'a');
+  $file = fopen('results_memory_consumption_objects.csv', 'a');
 
 // Puts the headers for columns in file.
   $columns = ['Number of objects', 'Memory consumption'];
@@ -11,7 +11,12 @@
 // Basic class for testing.
   class Foo
   {
-     public $var = '3.14159265359';
+     public $var = 'Lorem fistrum por la gloria de mi madre por la gloria de mi madre apetecan jarl. 
+                    A wan condemor te voy a borrar el cerito ese hombree pecador benemeritaar ahorarr. 
+                    Papaar papaar mamaar  condemor va usté muy cargadoo a gramenawer jarl caballo blanco caballo negroorl torpedo apetecan la caidita. 
+                    No puedor se calle ustée jarl condemor me cago en tus muelas de la pradera está la cosa muy malar se calle ustée a wan diodenoo. 
+                    Hasta luego Lucas pupita a peich a peich mamaar hasta luego Lucas al ataquerl mamaar sexuarl fistro. 
+                    Benemeritaar no puedor la caidita amatomaa ahorarr torpedo me cago en tus muelas está la cosa muy malar quietooor me cago en tus muelas.';
   }
 
 
@@ -40,7 +45,7 @@
 
 // Support function for modelling the output of memory values
   function formatBytes($bytes, $precision = 2) {
-    $units = array('B', 'KB', 'MB', 'GB', 'TB');
+    $units = ['B', 'KB', 'MB', 'GB', 'TB'];
     $bytes = max($bytes, 0);
     $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
     $pow = min($pow, count($units) - 1);
