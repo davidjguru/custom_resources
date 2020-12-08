@@ -31,7 +31,7 @@
       
       // Gets current memory usage and loads it in csv file.
       $current_memory_usage = memory_get_usage() - $baseMemory;
-      fputcsv($file, [$i, formatBytes($current_memory_usage)]);
+      fputcsv($file, [$i, $current_memory_usage]);
 
       if ( $i % 500 === 0 )
       {
@@ -50,6 +50,6 @@
     $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
     $pow = min($pow, count($units) - 1);
     $bytes /= pow(1024, $pow);
-
-    return round($bytes, $precision);
+   
+   return round($bytes, $precision) . ' ' . $units[$pow];
   }
